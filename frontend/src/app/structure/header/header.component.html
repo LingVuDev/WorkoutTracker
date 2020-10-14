@@ -1,0 +1,9 @@
+<mat-toolbar class="header">
+  Workout Planner
+  <div class="spacer"></div>
+  <div mat-tab-nav-bar>
+    <a mat-tab-link *ngFor="let link of links"
+       (click)="activeLink = link"
+       [active]="activeLink == link"> {{link}} </a>
+  </div>
+</mat-toolbar>

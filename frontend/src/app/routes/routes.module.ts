@@ -8,18 +8,23 @@ import { ProfileComponent } from './profile/profile.component';
 import { HistoryComponent } from './history/history.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   {
-    path: '',
+    path: 'dashboard',
     component: DashboardComponent,
   },
-  { path: 'dashboard',   redirectTo: '', pathMatch: 'full' },
-  { path: 'browse',   component: BrowseComponent },
-  { path: 'history',   component: BrowseComponent },
-  { path: 'profile',   component: ProfileComponent },
+  { path: 'browse', component: BrowseComponent },
+  { path: 'history', component: BrowseComponent },
+  { path: 'profile', component: ProfileComponent },
 ];
 
 @NgModule({
-  declarations: [DashboardComponent, BrowseComponent, ProfileComponent, HistoryComponent],
+  declarations: [
+    DashboardComponent,
+    BrowseComponent,
+    ProfileComponent,
+    HistoryComponent,
+  ],
   imports: [RouterModule.forRoot(routes), MaterialModule, ComponentsModule],
   exports: [RouterModule],
 })

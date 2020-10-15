@@ -6,10 +6,9 @@
       mat-tab-link
       *ngFor="let link of links"
       [routerLink]="link | lowercase"
-      (click)="activeLink = link"
       [active]="activeLink == link"
     >
-      {{ link }}
+      {{ link | titlecase }}
     </a>
   </div>
 </mat-toolbar>

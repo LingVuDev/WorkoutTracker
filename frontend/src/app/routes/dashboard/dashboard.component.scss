@@ -10,11 +10,10 @@
   .newsfeed {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 
     .news {
       margin-bottom: 8px;
-      width: 80%;
     }
   }
 }

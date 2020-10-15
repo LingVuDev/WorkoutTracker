@@ -1,0 +1,19 @@
+.dashboard {
+  margin: 8px;
+
+  .myworkouts {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+    gap: 10px;
+  }
+
+  .newsfeed {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    .news {
+      margin-bottom: 8px;
+    }
+  }
+}

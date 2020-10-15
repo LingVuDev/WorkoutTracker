@@ -1,0 +1,20 @@
+.workout-card {
+  padding-bottom: 1px;
+
+  &__image {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &__title {
+    .mat-card-title {
+      margin-bottom: 12px;
+    }
+    .mat-card-title {
+      font-size: 16px;
+    }
+    .mat-card-subtitle {
+      font-size: 12px;
+    }
+  }
+}

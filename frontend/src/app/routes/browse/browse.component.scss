@@ -1,0 +1,16 @@
+.browse {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: #212121;
+  height: 100%;
+
+  &__search {
+    padding: 16px 16px 0 16px;
+    color: white;
+  }
+
+  .search-icon {
+    color: white;
+  }
+}

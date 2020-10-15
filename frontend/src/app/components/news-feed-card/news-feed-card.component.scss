@@ -1,0 +1,25 @@
+.news-feed-card {
+
+  &__avatar {
+    overflow: hidden;
+
+    img {
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+
+  .mat-card-subtitle {
+    margin-bottom: 4px;
+  }
+
+  &__exercise {
+    margin-bottom: 16px;
+  }
+
+  &__content {
+    border-left: 2px solid white;
+    padding-left: 16px;
+    column-count: 3;
+  }
+}

@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Add new exercise</h1>
+<div mat-dialog-content>
+  <mat-form-field class="form-field">
+    <mat-label>Name</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field class="form-field">
+    <mat-chip-list #chipList aria-label="Tag set">
+      <mat-chip *ngFor="let tag of exercise.tags" [selectable]="true"
+               [removable]="true" (removed)="removeTag(tag)">
+        {{ tag }}
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+      <input placeholder="Tags"
+             [matChipInputFor]="chipList"
+             [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+             [matChipInputAddOnBlur]="true"
+             (matChipInputTokenEnd)="addTag($event)">
+    </mat-chip-list>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-flat-button color="primary" cdkFocusInitial>Create</button>
+  <button mat-button (click)="close()">Cancel</button>
+</div>

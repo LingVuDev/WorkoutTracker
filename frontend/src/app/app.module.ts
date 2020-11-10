@@ -6,11 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '@app/shared/material.module';
 import { HeaderComponent } from './structure/header/header.component';
 import { RoutesModule } from '@app/routes/routes.module';
+import { AddExcerciseDialogComponent } from './dialogs/add-excercise-dialog/add-excercise-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    AddExcerciseDialogComponent,
   ],
   imports: [
     BrowserModule,

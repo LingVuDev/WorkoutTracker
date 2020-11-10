@@ -1,6 +1,15 @@
 .dashboard {
   margin: 8px;
 
+  .actions {
+    display: flex;
+    margin-top: 8px;
+
+    .mat-flat-button {
+      margin-right: 8px;
+    }
+  }
+
   .myworkouts {
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );

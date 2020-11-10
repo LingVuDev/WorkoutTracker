@@ -4,13 +4,37 @@
   align-items: stretch;
   background: #212121;
   height: 100%;
+  padding: 16px 16px 0 16px;
+
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+  }
 
   &__search {
-    padding: 16px 16px 0 16px;
     color: white;
   }
 
   .search-icon {
     color: white;
+  }
+
+  .tag-list {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+
+    .tag {
+      background: #7b1fa2;
+      padding: 5px;
+      width: fit-content;
+      border-radius: 13px;
+      font-size: 10px;
+    }
+    .tag ~ .tag {
+      margin-left: 4px;
+    }
   }
 }

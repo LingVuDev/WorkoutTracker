@@ -1,43 +1,22 @@
 <div class="browse">
+  <div class="browse__actions">
+    <button mat-flat-button color="primary" (click)="openAddExerciseDialog()">Add exercise</button>
+  </div>
   <mat-form-field class="browse__search" appearance="outline" color="primary">
     <mat-label>Search</mat-label>
     <input matInput>
     <mat-icon class="search-icon" matPrefix>search</mat-icon>
   </mat-form-field>
   <mat-list>
-    <div mat-subheader>A</div>
-    <mat-list-item>
-      <mat-icon mat-list-icon>folder</mat-icon>
-      <div mat-line>ASomething</div>
-      <div mat-line>Something</div>
-    </mat-list-item>
-    <mat-list-item>
-      <mat-icon mat-list-icon>folder</mat-icon>
-      <div mat-line>ASomething</div>
-      <div mat-line>Something</div>
-    </mat-list-item>
-    <mat-list-item>
-      <mat-icon mat-list-icon>folder</mat-icon>
-      <div mat-line>ASomething</div>
-      <div mat-line>Something</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-    <div mat-subheader>B</div>
-    <mat-list-item>
-      <mat-icon mat-list-icon>folder</mat-icon>
-      <div mat-line>BSomething</div>
-      <div mat-line>Something</div>
-    </mat-list-item>
-    <mat-list-item>
-      <mat-icon mat-list-icon>folder</mat-icon>
-      <div mat-line>BSomething</div>
-      <div mat-line>Something</div>
-    </mat-list-item>
-    <mat-list-item>
-      <mat-icon mat-list-icon>folder</mat-icon>
-      <div mat-line>BSomething</div>
-      <div mat-line>Something</div>
-    </mat-list-item>
+    <ng-container *ngFor="let sortedExercises of sortExercises() | keyvalue">
+      <div mat-subheader>{{sortedExercises.key}}</div>
+      <mat-list-item *ngFor="let item of sortedExercises.value">
+        <div mat-line>{{item.name}}</div>
+        <div class="tag-list" mat-line>
+          <div class="tag" *ngFor="let tag of item.tags">{{ tag }}</div>
+        </div>
+      </mat-list-item>
+    </ng-container>
   </mat-list>
 
 </div>

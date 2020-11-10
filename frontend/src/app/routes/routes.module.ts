@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowseComponent } from './browse/browse.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HistoryComponent } from './history/history.component';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -25,7 +26,7 @@ const routes: Routes = [
     ProfileComponent,
     HistoryComponent,
   ],
-  imports: [RouterModule.forRoot(routes), MaterialModule, ComponentsModule],
+  imports: [RouterModule.forRoot(routes), MaterialModule, ComponentsModule, CommonModule],
   exports: [RouterModule],
 })
 export class RoutesModule {}
